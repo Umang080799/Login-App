@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Login Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <style>
+    body {
+      background-image: url("1215717995_426C7565204261636B67726F756E64203035.jpg");
+    }
+
+    /* Tooltip on top */
+
+    .test+.tooltip.top>.tooltip-arrow {
+      border-top: 5px solid green;
+    }
+
+    /* Tooltip on left */
+
+    .test+.tooltip.left>.tooltip-arrow {
+      border-left: 5px solid red;
+    }
+
+    /* Tooltip on right */
+
+    .test+.tooltip.right>.tooltip-arrow {
+      border-right: 5px solid black;
+    }
+
+    .tooltip {
+      opacity: 12 !important;
+      font-family: Georgia;
+      font-size: 15px;
+    }
+
+    body .tooltip-inner {
+      background-color: black;
+    }
+
+    .test {
+      width: 300px;
+      height: 40px;
+      margin-top: 20px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    $(document).on("mouseover", ".test", function () {
+      $('[data-toggle="tooltip"]').tooltip({ container: 'body' });
+      $(".tooltip").css("placement", "top");
+    });
+
+    $(document).on("mouseover", ".test", function () {
+      $('[data-toggle="tooltip"]').tooltip('show');
+      $(".tooltip").css("placement", "top");
+    }); 
+  </script>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Login</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <form id="signin" class="navbar-form navbar-right" role="form">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-user"></i>
+                </span>
+                <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-lock"></i>
+                </span>
+                <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="align">
+      <div id="logbox">
+        <form id="signup" method="post">
+          <h1>Create an Account</h1>
+          <input class='test' data-toggle='tooltip' href='#' data-trigger='hover' data-placement='right' title='Enter at least 8 characters'
+            type="username" placeholder="Username" class="input name" />
+          <input class='test' data-toggle='tooltip' href='#' data-trigger='hover' data-placement='right' title='Enter a unique emailid'
+            name="email" type="email" placeholder="Email address" required="required" class="input email" />
+          <input class='test' data-toggle='tooltip' href='#' data-trigger='hover' data-placement='right' title='Enter at least 10 characters'
+            name="password" type="password" placeholder="Enter password" required="required" class="input pass" />
+          <input type="submit" value="Sign me up!" class="inputButton" />
+        </form>
+      </div>
+    </div>
+    <!--col-md-6-->
+  </div>
+  </div>
+</body>
+
+</html>
